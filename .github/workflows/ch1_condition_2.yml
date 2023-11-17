@@ -6,4 +6,5 @@ jobs:
     if: ${{ github.event_name == 'workflow_dispatch' && github.ref == 'refs/heads/master' }}
     steps:
       - name: Say Hello
-        run: echo "Say Hello to $GITHUB_ACTOR"    
+        run: |
+          echo "Say Hello to $GITHUB_ACTOR"

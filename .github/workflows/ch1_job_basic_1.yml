@@ -31,6 +31,7 @@ jobs:
       run: |
         echo "Build ID: ${{ env.build_id }}"
         echo "Test Output: ${{ env.test_output }}"
+        echo ✅✅✅ ${{ needs.build }}
     - name: Deploy to production
       env:
         test_output: ${{ needs.build.outputs.output2 }}

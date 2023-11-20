@@ -7,8 +7,8 @@
       steps:
         - name: Print GitHub Variables
           env:
-            JSON_DATA: ${{ toJSON(github) }}
-          run : echo "json_data :" ${{ JSON_DATA }}
+            GITHUB_CONTEXT: ${{ toJSON(github) }}
+          run : echo $GITHUB_CONTEXT
     # build:
     #   if: ${{ github.repository == 'devbluemoons/github-action-course' }}
     #   runs-on: ubuntu-latest

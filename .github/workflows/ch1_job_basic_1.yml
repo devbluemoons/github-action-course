@@ -11,11 +11,11 @@ jobs:
     steps:
     - name: Checkout 
       uses: actions/checkout@v2
-    - name: build_project
+    - id: build_project
       run: |
         echo "build_id=$GITHUB_JOB"
         echo "build_id=$GITHUB_JOB" >> "$GITHUB_OUTPUT"
-    - name: test_project
+    - id: test_project
       run: |
         echo "test_output=pass"
         echo "test_output=pass" >> "$GITHUB_OUTPUT"

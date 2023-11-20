@@ -7,7 +7,7 @@
       steps:
         - name: Print GitHub Variables
           env:
-            JSON_DATA: ${{ toJSON(some.var) }}
+            JSON_DATA: ${{ toJSON(github) }}
           run : echo "json_data :" ${{ JSON_DATA }}
     # build:
     #   if: ${{ github.repository == 'devbluemoons/github-action-course' }}

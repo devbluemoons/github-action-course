@@ -6,7 +6,7 @@
       runs-on: ubuntu-latest
       steps:
         - name: Print GitHub Variables
-          run : echo "GitHub Variables: ${{ toJson(github) }}"
+          run : echo ${{ toJson(github) }}
     # build:
     #   if: ${{ github.repository == 'devbluemoons/github-action-course' }}
     #   runs-on: ubuntu-latest

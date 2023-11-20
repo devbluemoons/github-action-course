@@ -39,5 +39,6 @@ jobs:
         test_output: ${{ needs.build.outputs.output2 }}
       if: ${{ env.test_output == 'pass' }}
       run: |
+        echo ✅✅✅ ${{ env.test_output == 'pass' }}
         echo "Build ID: $build_id"
         echo "Deploying to production server"

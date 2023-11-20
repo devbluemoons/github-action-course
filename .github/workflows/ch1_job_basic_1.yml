@@ -33,6 +33,7 @@ jobs:
         echo "Build ID: ${{ env.build_id }}"
         echo "Test Output: ${{ env.test_output }}"
         echo ✅✅✅ $needs_build
+        echo ✅✅✅ $GITHUB_OUTPUT
     - name: Deploy to production
       env:
         test_output: ${{ needs.build.outputs.output2 }}

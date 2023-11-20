@@ -40,5 +40,5 @@ jobs:
       if: ${{ env.test_output == 'pass' }}
       run: |
         echo ✅✅✅ ${{ env.test_output == 'pass' }}
-        echo "Build ID: $build_id"
+        echo "Build ID: env.build_id"
         echo "Deploying to production server"

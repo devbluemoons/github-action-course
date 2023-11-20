@@ -28,10 +28,11 @@ jobs:
       env:
         build_id: ${{ needs.build.outputs.output1 }}
         test_output: ${{ needs.build.outputs.output2 }}
+        needs_build: ${{ toJSON(needs.build) }}
       run: |
         echo "Build ID: ${{ env.build_id }}"
         echo "Test Output: ${{ env.test_output }}"
-        echo ✅✅✅ ${{ needs.build }}
+        echo ✅✅✅ $needs_build
     - name: Deploy to production
       env:
         test_output: ${{ needs.build.outputs.output2 }}

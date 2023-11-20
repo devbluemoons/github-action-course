@@ -8,7 +8,7 @@
         - name: Print GitHub Variables
           env:
             GITHUB_CONTEXT: ${{ toJSON(github) }}
-          run: echo "GITHUB_CONTEXT :" ${{ env.GITHUB_CONTEXT }}
+          run: echo ${{ env.GITHUB_CONTEXT }}
     # build:
     #   if: ${{ github.repository == 'devbluemoons/github-action-course' }}
     #   runs-on: ubuntu-latest
